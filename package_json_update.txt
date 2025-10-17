@@ -1,0 +1,14 @@
+需要在package.json中添加以下scripts（如果还没有）：
+
+{
+  "scripts": {
+    "dev": "tsx watch server/_core/index.ts",
+    "build": "tsc && vite build",
+    "start": "node dist/server/_core/index.js",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio"
+  }
+}
+
+注意：部署到Railway时需要确保有build和start脚本。
+
